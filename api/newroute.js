@@ -1,7 +1,7 @@
 import { OpenAI } from 'openai';
-//const openai = new OpenAI({apiKey: process.env.CHAGPT_KEY});
 
 export default async function handler(req, res) {
+    const openai = new OpenAI({apiKey: process.env.CHAGPT_KEY});
     const search = req.query.search || '';
     const rosterInfo = "inside api new";
     console.log(rosterInfo);
